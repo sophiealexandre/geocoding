@@ -1,0 +1,17 @@
+<%= render './shared/banner' %> <br>
+
+<div class="container">
+  <strong>Nom:</strong>
+  <%= @flat.name %> <br>
+
+
+  <strong>Adresse:</strong>
+  <%= @flat.address %>
+  <%= link_to 'Editer', edit_flat_path(@flat), class: 'btn btn-primary btn-sm' %>
+  <%= link_to 'Retour', flats_path, class: 'btn btn-primary btn-sm' %>
+</div>
+
+
+
+
+<%= render './shared/footer' %>

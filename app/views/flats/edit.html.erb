@@ -1,0 +1,9 @@
+<%= render './shared/banner' %> <br>
+
+<div class="container">
+  <%= render 'form', flat: @flat , class: 'btn btn-primary btn-sm'%> <br>
+  <%= link_to 'Voir', @flat , class: 'btn btn-primary btn-sm'%> <br>
+  <%= link_to 'Retour', flats_path , class: 'btn btn-primary btn-sm'%> <br>
+</div>
+
+<%= render './shared/footer' %>
