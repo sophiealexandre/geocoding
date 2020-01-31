@@ -6,8 +6,19 @@
   <div class="container">
 
     <div class="row align-items-start">
+
+
+
       <div class="col-sm-6">
-           <% @flats.each do |flat| %>
+        <div
+        id="map"
+        style="width: cover;
+        height: 600px"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      </div>
+    </div>
+<% @flats.each do |flat| %>
             <div class="card-product">
                 <div class="card-product-infos">
                 <td><h2> <%= flat.name %></h2></td>
@@ -18,20 +29,6 @@
               </div>
             </div>
            <% end %> <br>
-      </div>
-
-
-
-      <div class="col-sm-6">
-        <div
-        id="map"
-        style="width: 100%;
-        height: 600px"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-      </div>
-    </div>
-
 
   </tbody>
     <%= render './shared/footer' %>
